@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "pip",
+  "version": "100",
+
+  "name": "Picture in Picture",
+  "description": "Always keep your window on top!",
+  "authors": ["Miraculixx"],
+  "contact": {
+    "homepage": "https://mutils.net/",
+    "sources": "https://github.com/MiraculixxT/MUtils"
+  },
+
+  "license": "MIT",
+  "icon": "assets/pip/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "de.miraculixx.pip.PictureInPictureKt::init"
+      }
+    ]
+  },
+  "mixins": [
+    "mutils-timer.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.10",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {},
+  "custom": {
+    "fabric-icon-loader": {
+      "icons": [
+        {
+          "input": "assets/pip/icon.ico",
+          "sizes": [64]
+        }
+      ]
+    }
+  }
+}
